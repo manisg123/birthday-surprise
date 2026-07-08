@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy Birthday 🎂</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ff5f6d,#ffc371);
+    text-align:center;
+    overflow:hidden;
+    color:white;
+}
+
+.container{
+    margin-top:80px;
+}
+
+h1{
+    font-size:60px;
+    animation:zoom 2s infinite alternate;
+}
+
+h2{
+    margin-top:20px;
+    font-size:40px;
+}
+
+p{
+    margin-top:20px;
+    font-size:24px;
+}
+
+.cake{
+    font-size:120px;
+    margin:20px;
+}
+
+button{
+    padding:15px 35px;
+    font-size:22px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:white;
+    color:#ff4081;
+    font-weight:bold;
+}
+
+button:hover{
+    background:gold;
+}
+
+@keyframes zoom{
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
+}
+
+.balloon{
+    position:absolute;
+    bottom:-120px;
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    animation:fly 8s linear infinite;
+}
+
+@keyframes fly{
+    from{transform:translateY(0);}
+    to{transform:translateY(-120vh);}
+}
+
+.balloon:nth-child(1){left:10%;background:red;}
+.balloon:nth-child(2){left:25%;background:blue;animation-delay:2s;}
+.balloon:nth-child(3){left:40%;background:green;animation-delay:4s;}
+.balloon:nth-child(4){left:60%;background:yellow;animation-delay:1s;}
+.balloon:nth-child(5){left:80%;background:pink;animation-delay:3s;}
+
+#message{
+    display:none;
+    font-size:32px;
+    margin-top:30px;
+    color:yellow;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<div class="container">
+
+<h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+<h2>Dear ❤️ Your Friend ❤️</h2>
+
+<div class="cake">🎂</div>
+
+<p>
+May your birthday bring lots of happiness,<br>
+love, success and beautiful memories! 💖
+</p>
+
+<button onclick="surprise()">🎁 Click Here</button>
+
+<div id="message">
+🥳🎂 Happy Birthday! 🎂🥳<br><br>
+🎈 Stay Happy 🎈<br>
+🌸 Stay Blessed 🌸<br>
+💖 Enjoy Your Special Day 💖
+</div>
+
+</div>
+
+<audio id="song" autoplay loop>
+    <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function surprise(){
+    document.getElementById("message").style.display="block";
+    alert("🎉 Happy Birthday! Have an Amazing Year Ahead! 🎂");
+}
+</script>
+
+</body>
+</html>
